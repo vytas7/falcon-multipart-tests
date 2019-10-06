@@ -1,7 +1,7 @@
 language: python
 
-dist: xenial
-install: pip install tox
+dist: bionic
+install: pip install --upgrade pip tox
 
 matrix:
     include:
