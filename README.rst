@@ -18,7 +18,7 @@ This repository mainly focuses on streamlining three different scenarios:
 * Wrapped part stream read throughput for large files.
 * Tiny and/or buffer-misaligned reads.
 * Multipart forms with an insane amount of parts (although completely contrived
-  for the practical purposes, but that helps in opimizing per-part parsing
+  for all practical purposes, but that helps in opimizing per-part parsing
   overhead).
 
 

@@ -1,6 +1,6 @@
 language: python
 
-dist: bionic
+dist: xenial
 install: pip install --upgrade pip tox
 
 matrix:
@@ -9,7 +9,11 @@ matrix:
           env: TOXENV=flake8
         - python: 3.7
           env:
-            - TOXENV=bench
+            - TOXENV=bench-py37
+            - TEST_FORM_GIB_SIZE=2
+        - python: pypy3.6-7.1.1
+          env:
+            - TOXENV=bench-pypy36
             - TEST_FORM_GIB_SIZE=2
 
 script: tox
