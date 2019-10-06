@@ -8,6 +8,8 @@ matrix:
         - python: 3.7
           env: TOXENV=flake8
         - python: 3.7
-          env: TOXENV=bench
+          env:
+            - TOXENV=bench
+            - TEST_FORM_GIB_SIZE=2
 
-script: tox
+script: free -m && tox
