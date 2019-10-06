@@ -1,7 +1,7 @@
 language: python
 
 dist: xenial
-install: pip install --upgrade pip tox
+install: pip install --upgrade pip tox virtualenv
 
 matrix:
     include:
@@ -14,6 +14,6 @@ matrix:
         - python: pypy3.6-7.1.1
           env:
             - TOXENV=bench-pypy36
-            - TEST_FORM_GIB_SIZE=2
+            - TEST_FORM_GIB_SIZE=1
 
 script: tox
