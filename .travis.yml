@@ -12,4 +12,4 @@ matrix:
             - TOXENV=bench
             - TEST_FORM_GIB_SIZE=2
 
-script: free -m && tox
+script: tox
