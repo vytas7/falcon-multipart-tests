@@ -1,6 +1,7 @@
 language: python
 
 dist: xenial
+install: pip install tox
 
 matrix:
     include:
