@@ -15,12 +15,12 @@ except ImportError:
 PARSE_OPTIONS = MultipartParseOptions()
 
 FORM1_BOUNDARY = b'BOUNDARYxxxxxxxxxxxxxxxxxxxxxxx'
-FORM1_GIB_SIZE = int(os.environ.get('TEST_FORM_GIB_SIZE', '5'))
+FORM1_MIB_SIZE = int(os.environ.get('TEST_FORM_MIB_SIZE', '5120'))
 FORM1 = (
     b'--BOUNDARYxxxxxxxxxxxxxxxxxxxxxxx\r\n'
     b'Content-Disposition: form-data; name="file"; filename="bytes"\r\n'
     b'Content-Type: application/x-falcon\r\n\r\n' +
-    b'123456789abcdef\n' * 64 * 1024 * 1024 * FORM1_GIB_SIZE +
+    b'123456789abcdef\n' * 64 * 1024 * FORM1_MIB_SIZE +
     b'\r\n'
     b'--BOUNDARYxxxxxxxxxxxxxxxxxxxxxxx\r\n'
     b'Content-Disposition: form-data; name="empty"\r\n'
@@ -52,4 +52,4 @@ def form1():
 
 @pytest.fixture
 def expected_size1():
-    return FORM1_GIB_SIZE * 1024 ** 3
+    return FORM1_MIB_SIZE * 1024 ** 2

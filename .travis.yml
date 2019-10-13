@@ -10,10 +10,10 @@ matrix:
         - python: 3.7
           env:
             - TOXENV=bench-py37
-            - TEST_FORM_GIB_SIZE=2
+            - TEST_FORM_MIB_SIZE=512
         - python: pypy3.6-7.1.1
           env:
             - TOXENV=bench-pypy36
-            - TEST_FORM_GIB_SIZE=1
+            - TEST_FORM_MIB_SIZE=512
 
 script: tox
