@@ -10,7 +10,7 @@ media handler for `the Falcon web framework <https://falconframework.org>`_.
 "Normal" functionality is covered with tests that are shipped with the feature
 itself. At the time of writing, the multipart form handling code can be found
 in the
-`multipart-form-handler-wip <https://github.com/vytas7/falcon/tree/multipart-form-handler-wip>`_
+`multipart-form-handler <https://github.com/vytas7/falcon/tree/multipart-form-handler>`_
 branch.
 
 This repository mainly focuses on streamlining three different scenarios:
