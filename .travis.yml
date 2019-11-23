@@ -5,15 +5,27 @@ install: pip install --upgrade pip tox virtualenv
 
 matrix:
     include:
-        - python: 3.7
-          env: TOXENV=flake8
-        - python: 3.7
-          env:
-            - TOXENV=bench-py37
-            - TEST_FORM_MIB_SIZE=512
         - python: pypy3.6-7.1.1
           env:
             - TOXENV=bench-pypy36
             - TEST_FORM_MIB_SIZE=512
+        - python: 3.5
+          env:
+            - TOXENV=py35
+            - TEST_FORM_MIB_SIZE=1024
+        - python: 3.6
+          env:
+            - TOXENV=py36
+            - TEST_FORM_MIB_SIZE=1024
+        - python: 3.7
+          env:
+            - TOXENV=py37
+            - TEST_FORM_MIB_SIZE=1024
+        - python: 3.8
+          env:
+            - TOXENV=py38
+            - TEST_FORM_MIB_SIZE=1024
+        - python: 3.8
+          env: TOXENV=flake8
 
 script: tox
