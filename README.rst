@@ -7,6 +7,9 @@ This is a collection of extensive tests, long-running benchmarks and other
 tests that are too specific to the development of the ``multipart/form-data``
 media handler for `the Falcon web framework <https://falconframework.org>`_.
 
+See also `this Gist <https://gist.github.com/vytas7/34c60e5ac3a4bc2f2eb0af2428d77003>`_
+for design details, examples and progress updates.
+
 "Normal" functionality is covered with tests that are shipped with the feature
 itself. At the time of writing, the multipart form handling code can be found
 in the
