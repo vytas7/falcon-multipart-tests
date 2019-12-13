@@ -36,7 +36,7 @@ def api_client():
         falcon.MEDIA_JSON: falcon.media.JSONHandler(),
         falcon.MEDIA_MULTIPART: falcon.media.MultipartFormHandler(),
     })
-    api = falcon.API()
+    api = falcon.App()
     api.req_options.media_handlers = handlers
     api.add_route('/uploads', CloudUpload())
 
