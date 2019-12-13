@@ -27,5 +27,11 @@ matrix:
             - TEST_FORM_MIB_SIZE=512
         - python: 3.8
           env: TOXENV=flake8
+        - python: 3.8
+          os: linux
+          arch: s390x
+          env:
+            - TOXENV=py38
+            - TEST_FORM_MIB_SIZE=1024
 
-script: tox
+script: lscpu && tox
