@@ -5,12 +5,12 @@ import os
 import pytest
 
 from falcon.media.multipart import MultipartForm, MultipartParseOptions
-from falcon.util.streams import BufferedStream
+from falcon.util.reader import BufferedReader
 
 try:
-    from falcon.cyutil.streams import BufferedStream as CyBufferedStream
+    from falcon.cyutil.reader import BufferedReader as CyBufferedReader
 except ImportError:
-    CyBufferedStream = None
+    CyBufferedReader = None
 
 
 PARSE_OPTIONS = MultipartParseOptions()
@@ -69,11 +69,11 @@ STREAM2 = io.BytesIO(FORM2)
 
 
 def stream_factory(stream_type, bsize, stream, length):
-    if stream_type == 'cythonized' and CyBufferedStream is None:
-        pytest.skip('cythonized BufferedStream is unavailable')
+    if stream_type == 'cythonized' and CyBufferedReader is None:
+        pytest.skip('cythonized BufferedReader is unavailable')
 
     stream.seek(0)
-    cls = BufferedStream if stream_type == 'stream' else CyBufferedStream
+    cls = BufferedReader if stream_type == 'stream' else CyBufferedReader
     return cls(stream.read, length, bsize)
 
 
