@@ -36,4 +36,5 @@ matrix:
 
 script:
   - lscpu
+  - sudo chown -R travis:travis $HOME/.cache/pip
   - tox
