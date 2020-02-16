@@ -30,7 +30,7 @@ matrix:
         - python: pypy3.6-7.1.1
           env:
             - TOXENV=bench-pypy36
-            - TEST_FORM_MIB_SIZE=512
+            - TEST_FORM_MIB_SIZE=1024
         - python: 3.8
           env: TOXENV=flake8
 

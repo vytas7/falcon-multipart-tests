@@ -11,12 +11,8 @@ See also `this Gist <https://gist.github.com/vytas7/34c60e5ac3a4bc2f2eb0af2428d7
 for design details, examples and progress updates.
 
 "Normal" functionality is covered with tests that are shipped with the feature
-itself. At the time of writing, the multipart form handling code can be found
-in the
-`multipart-form-handler <https://github.com/vytas7/falcon/tree/multipart-form-handler>`_
-branch.
-
-This repository mainly focuses on streamlining three different scenarios:
+itself. This repository mainly focuses on streamlining three different
+scenarios:
 
 * Wrapped part stream read throughput for large files.
 * Tiny and/or buffer-misaligned reads.
